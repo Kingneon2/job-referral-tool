@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Referral Tool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Job Referral Portal</h1>
+        
+        <!-- Analytics Widget -->
+        <div class="analytics-card">
+            <h3>Analytics Dashboard</h3>
+            <p>Total Referrals: <span id="total-count">0</span></p>
+            <p>Unique Job Titles: <span id="unique-jobs-count">0</span></p>
+        </div>
+
+        <!-- Submission Form -->
+        <form id="referral-form">
+            <h3>Submit a New Referral</h3>
+            <input type="text" id="referrer_name" placeholder="Your Name (Referrer)" required>
+            <input type="text" id="referred_name" placeholder="Candidate Name" required>
+            <input type="email" id="email" placeholder="Candidate Email" required>
+            <input type="text" id="job_title" placeholder="Job Title" required>
+            <textarea id="reason" placeholder="Reason for referral (max 250 chars)" maxlength="250" required></textarea>
+            <button type="submit">Submit Referral</button>
+        </form>
+
+        <!-- Referral List Dashboard -->
+        <div class="dashboard">
+            <h3>Submitted Referrals</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Referrer</th>
+                        <th>Candidate</th>
+                        <th>Email</th>
+                        <th>Job Title</th>
+                        <th>Reason</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="referral-table-body">
+                    <!-- Dynamic rows -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
